@@ -1,8 +1,24 @@
 aid: airside
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/airside.png
 name: Airside
-description: 'Airside is a company surfaced as a portfolio company of bain-capital-ventures and added
-  to the API Evangelist network as a stub for enrichment. Sector: ai-apps. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'Airside (formerly Airside Mobile) is a digital identity and mobile credential product
+  whose website airsidemobile.com now permanently redirects (HTTP 301) to Entrust''s Airside app page,
+  indicating the product and its assets were acquired by Entrust. As of this enrichment pass no public
+  API, OpenAPI specification, SDK, developer portal, or developer documentation surface could be
+  discovered: developer/api/docs subdomains do not resolve and the root domain and /.well-known/security.txt
+  both redirect off-site to Entrust. The company was originally surfaced as a bain-capital-ventures
+  portfolio lead (sector ai-apps) and remains a stub pending any first-party developer program.'
 url: https://raw.githubusercontent.com/api-evangelist/airside/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -16,6 +32,11 @@ modified: '2026-07-17'
 tags:
 - Company
 - Ai Apps
+- Digital Identity
+- Mobile Credentials
+- Identity Verification
+- Acquired
+- Entrust
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +44,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/airside-domain-security.yml
 - type: Website
   url: https://airsidemobile.com/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
